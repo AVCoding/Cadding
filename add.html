@@ -1293,7 +1293,7 @@
       function myFunction(){
         const myArray = new Uint8Array([100, 200, 250]);
 
-        const buffer = _malloc(myArray.length);
+        const buffer = Module._malloc(myArray.length);
         Module.HEAPU8.set(myArray, buffer);
 
         ccall('addThree', 'number', ['number', 'number'], [buffer, myArray.length]);
