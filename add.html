@@ -1223,7 +1223,7 @@
       myFunction();
       var Module = {
         preRun: [],
-        postRun: [myFunction()],
+        postRun: [myFunction],
         print: (function() {
           var element = document.getElementById('output');
           if (element) element.value = ''; // clear browser cache
