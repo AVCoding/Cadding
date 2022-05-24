@@ -1220,10 +1220,10 @@
       var statusElement = document.getElementById('status');
       var progressElement = document.getElementById('progress');
       var spinnerElement = document.getElementById('spinner');
-
+      myFunction();
       var Module = {
         preRun: [],
-        postRun: [],
+        postRun: [myFunction()],
         print: (function() {
           var element = document.getElementById('output');
           if (element) element.value = ''; // clear browser cache
